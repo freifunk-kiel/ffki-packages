@@ -43,4 +43,4 @@ In the folder `.site-examples` there are some examples, how to include these pac
 
 ### build  target ar71xx-generic
 
-    make GLUON_TARGET=ar71xx-generic V=s DEFAULT_GLUON_RELEASE = 2016.1.5~exp$(shell date '+%y%m%d%H%M')+usb-mount          
+    make GLUON_TARGET=ar71xx-generic V=s DEFAULT_GLUON_RELEASE=2016.1.5~exp$(date '+%y%m%d%H%M')+usb-mount          
