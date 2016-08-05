@@ -11,3 +11,5 @@ Set a custom string as owner contact that will be distributed in the mesh. You c
       obligatory = true
     },
 
+This package Replaces the standard gluon-package `gluon-config-mode-contact-info`
+
