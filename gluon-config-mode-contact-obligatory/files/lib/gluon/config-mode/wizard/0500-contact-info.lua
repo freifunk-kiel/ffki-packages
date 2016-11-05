@@ -19,6 +19,19 @@ function M.section(form)
   o.rmempty = not site.owner.obligatory
   o.datatype = "string"
   o.description = i18n.translate("e.g. E-mail or phone number")
+  o.validate = function(self, val)
+    if val == nil then
+      self.section.error = {
+        [1] = { 
+          i18n.translate(
+            'If you are really sure that you do not want to add any '
+              .. 'contact info enter a single space character'
+          )
+        }
+      }
+    end
+    return val
+  end
   o.maxlen = 140
 end
 
