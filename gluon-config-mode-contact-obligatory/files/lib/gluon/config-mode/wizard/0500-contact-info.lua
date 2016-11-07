@@ -22,10 +22,11 @@ function M.section(form)
   o.validate = function(self, val)
     if val == nil then
       self.section.error = {
-        [1] = { 
+        [1] = {
           i18n.translate(
-            'If you are really sure that you do not want to add any '
-              .. 'contact info enter a single space character'
+            "You didn't provide any contact information! If you really want to run your "
+              .. "node anonymously, you can enter a blank here. Please tell us an alternative "
+              .. "how we could contact you in case there is anything wrong with your node."
           )
         }
       }
