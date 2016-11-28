@@ -10,6 +10,7 @@ function M.section(form)
   local o = s:option(cbi.Value, "_hostname", i18n.translate("Node name"))
   o.value = pretty_hostname.get(uci)
   o.rmempty = false
+  o.datatype = "hostname"
 end
 
 function M.handle(data)
