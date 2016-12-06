@@ -8,7 +8,7 @@ case "${ACTION}" in
                s*[0-9])
                     if [ "0" == "$(grep "${DEVICENAME}" /proc/mounts|echo $?)" ]; then
                         [ -d "/mnt/${DEVICENAME}" ] || mkdir "/mnt/${DEVICENAME}"
-                        logger "/mnt/${DEVICENAME} mouted and linked to ${WEBPATH}/${USBMEDIAPATH}"
+                        logger "/mnt/${DEVICENAME} mounted and linked to ${WEBPATH}/${USBMEDIAPATH}"
                         mount -o ro "/dev/${DEVICENAME}" "/mnt/${DEVICENAME}" || rmdir "/mnt/${DEVICENAME}"
                         [ -d "${WEBPATH}/${USBMEDIAPATH}" ] || mv "${WEBPATH}/${DEF_USB}" "${WEBPATH}/${USBMEDIAPATH}"
                         ln -fs "/mnt/${DEVICENAME}" "${WEBPATH}/${USBMEDIAPATH}"
