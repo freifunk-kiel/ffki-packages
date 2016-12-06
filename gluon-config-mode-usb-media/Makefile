@@ -31,10 +31,12 @@ endef
 
 define Build/Compile
 	$(call GluonBuildI18N,gluon-config-mode-usb-media,i18n)
+	$(call GluonSrcDiet,./luasrc,$(PKG_BUILD_DIR)/luadest/)
 endef
 
 define Package/gluon-config-mode-usb-media/install
 	$(CP) ./files/* $(1)/
+	$(CP) $(PKG_BUILD_DIR)/luadest/* $(1)/
 	$(call GluonInstallI18N,gluon-config-mode-usb-media,$(1))
 endef
 
