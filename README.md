@@ -70,10 +70,11 @@ In the folder `.site-examples` there are some examples, how to include these pac
 
     make prepare-target V=s
 
-### quick check for errors in build for only one package
+### build only one package
 
+    make prepare-target
     make package/gluon-config-mode-contact-obligatory/compile V=s
 
-### build  target ar71xx-generic
+### build target ar71xx-generic
 
     make GLUON_TARGET=ar71xx-generic V=s DEFAULT_GLUON_RELEASE=2016.1.5~exp$(date '+%y%m%d%H%M')+usb-mount          
