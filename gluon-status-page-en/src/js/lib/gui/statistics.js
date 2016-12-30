@@ -178,7 +178,7 @@ define(["lib/helper"], function (Helper) {
 
   function prettyPackets(d) {
     var v = Helper.formatNumberFixed(d, 0)
-    return v + " Pakete/s"
+    return v + " Packets/s"
   }
 
   function prettyPrefix(prefixes, step, d) {
