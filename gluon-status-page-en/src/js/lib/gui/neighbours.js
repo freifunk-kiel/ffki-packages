@@ -132,7 +132,7 @@ function (Helper, SignalGraph, Signal) {
     table.classList.add("datatable")
 
     var th = document.createElement("th")
-    th.textContent = "Knoten"
+    th.textContent = "Node"
     tr.appendChild(th)
 
     th = document.createElement("th")
@@ -144,11 +144,11 @@ function (Helper, SignalGraph, Signal) {
     tr.appendChild(th)
 
     th = document.createElement("th")
-    th.textContent = "Entfernung"
+    th.textContent = "Distance"
     tr.appendChild(th)
 
     th = document.createElement("th")
-    th.textContent = "Inaktiv"
+    th.textContent = "Inactive"
     tr.appendChild(th)
 
     el.appendChild(table)
