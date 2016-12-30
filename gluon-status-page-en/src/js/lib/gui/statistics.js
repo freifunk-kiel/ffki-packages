@@ -171,9 +171,9 @@ define(["lib/helper"], function (Helper) {
 
   function prettyPeer(d) {
     if (d === null)
-      return "nicht verbunden"
+      return "not connected"
     else
-      return "verbunden (" + prettyUptime(d.established) + ")"
+      return "connected (" + prettyUptime(d.established) + ")"
   }
 
   function prettyPackets(d) {
