@@ -230,7 +230,7 @@ define(["lib/helper"], function (Helper) {
   }
 
   function prettyNVRAM(usage) {
-    return Helper.formatNumber(usage * 100, 3) + "% belegt"
+    return Helper.formatNumber(usage * 100, 3) + "% used"
   }
 
   function prettyLoad(load) {
