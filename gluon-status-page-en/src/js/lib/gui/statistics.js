@@ -171,14 +171,14 @@ define(["lib/helper"], function (Helper) {
 
   function prettyPeer(d) {
     if (d === null)
-      return "nicht verbunden"
+      return "not connected"
     else
-      return "verbunden (" + prettyUptime(d.established) + ")"
+      return "connected (" + prettyUptime(d.established) + ")"
   }
 
   function prettyPackets(d) {
     var v = Helper.formatNumberFixed(d, 0)
-    return v + " Pakete/s"
+    return v + " Packets/s"
   }
 
   function prettyPrefix(prefixes, step, d) {
@@ -230,7 +230,7 @@ define(["lib/helper"], function (Helper) {
   }
 
   function prettyNVRAM(usage) {
-    return Helper.formatNumber(usage * 100, 3) + "% belegt"
+    return Helper.formatNumber(usage * 100, 3) + "% used"
   }
 
   function prettyLoad(load) {
