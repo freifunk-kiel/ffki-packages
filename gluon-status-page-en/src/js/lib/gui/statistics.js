@@ -274,7 +274,7 @@ define(["lib/helper"], function (Helper) {
       children.forEach(function (d) {d.destroy()})
     }
 
-    return { title: document.createTextNode("Statistik")
+    return { title: document.createTextNode("Statistics")
            , render: function (d) { d.appendChild(el) }
            , destroy: destroy
            }
