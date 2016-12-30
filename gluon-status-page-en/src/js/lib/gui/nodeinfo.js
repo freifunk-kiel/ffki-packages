@@ -37,7 +37,7 @@ define(["lib/helper"], function (Helper) {
       dlEntry(list, nodeInfo, "owner.contact", "Contact")
       dlEntry(list, nodeInfo, "hardware.model", "Model")
       dlEntry(list, nodeInfo, "network.mac", "Primary MAC")
-      dlEntry(list, nodeInfo, "network.addresses", "IP-Adress")
+      dlEntry(list, nodeInfo, "network.addresses", "IP address")
       dlEntry(list, nodeInfo, "software.firmware.release", "Firmware")
       dlEntry(list, nodeInfo, "software.fastd.enabled", "Mesh-VPN")
       dlEntry(list, nodeInfo, "software.autoupdater.enabled", "Automatic Updates")
