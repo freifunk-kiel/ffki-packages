@@ -38,23 +38,30 @@ This package Replaces the standard gluon-package `gluon-config-mode-contact-info
 
 ### gluon-config-mode-hostname-no-pretty
 
-Adds an extra condition, that the hostname must be of teh LUA type "hostname" 
-too. This will disallow some hostnames, that would be of type `pretty_hostname`
-but it allows to enter an invalid hostname as default, so the user is not allowed
-to use the default hostname suggestion any more.
+Adds an extra condition, that the nodes hostname must be of the LUA type "hostname". 
+This will disallow some possibilities that would be allowed since 2016.2 by the new
+type `pretty_hostname`. The advantage is, that it allows you to set an invalid default
+hostname in your site.conf, so the user is not allowed to use the default hostname 
+suggestion any more.
 
-This package Replaces the standard gluon-package `gluon-config-mode-hostname`
+This package replaces the standard gluon-package `gluon-config-mode-hostname`
 
 
 ### gluon-config-mode-usb-media
 
-Enable USB media automount in config mode and set the 
-web path to access it via http://[IPv6]
+Enable USB media automount in config mode and set the web path to access it 
+(default `/media/`) so the USB storage will be accessible via http://[IPv6]/media/
 
 ### gluon-usb-media
 
 Automatically mount your USB media in the configured web path
-in gluon-config-mode-usb-media if "Enable USB media" is set to truew
+in `gluon-config-mode-usb-media` if "Enable USB media" is set to true.
+
+### gluon-status-page-en
+
+An exact copy of `gluon-status-page` with just the german strings translated to english.
+
+This package replaces the standard gluon-package `gluon-status-page`
 
 # site-config
 
