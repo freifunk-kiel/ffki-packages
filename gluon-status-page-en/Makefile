@@ -36,7 +36,7 @@ define Package/gluon-status-page-en
   SECTION:=gluon
   CATEGORY:=Gluon
   TITLE:=Adds a status page showing information about the node.
-  DEPENDS:=+gluon-status-page-en-api
+  DEPENDS:=+gluon-status-page-api
 endef
 
 define Package/gluon-status-page-en/description
