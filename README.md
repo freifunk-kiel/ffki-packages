@@ -50,7 +50,15 @@ This package replaces the standard gluon-package `gluon-config-mode-hostname`
 ### gluon-config-mode-usb-media
 
 Enable USB media automount in config mode and set the web path to access it 
-(default `/media/`) so the USB storage will be accessible via http://[IPv6]/media/
+(default `/media/`) so the USB storage will be accessible for example via _http://\[1B46:0f:40CB::00de]/media/_
+
+On the SSH console you can enable usb-sharing with:
+
+    uci set gluon-usb-media.settings.share_device='1'
+
+If you don't want to share your device under the default URL, you can change this setting with:
+
+    uci set gluon-usb-media.settings.path='secret-path'
 
 ### gluon-usb-media
 
