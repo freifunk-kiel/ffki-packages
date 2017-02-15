@@ -7,26 +7,14 @@ local M = {}
 
 function M.section(form)
   local s = form:section(cbi.SimpleSection, nil, i18n.translate(
-    "Please accept the PPA."
+      "Please agree with the <a href=\"http://www.picopeer.net/\" target=\"_blank\">"
+      .. "Picopeering Agreement (PPA)</a> and be available."
     )
   )
 
   local o = s:option(cbi.Flag, "_ppa", i18n.translate("I agree with the PPA"))
   o.default = uci:get_first("gluon-node-info", "owner", "ppa", "")
   o.rmempty = false
-
-  o.validate = function(self, val)
-    if val == false then
-      self.section.error = {
-        [1] = {
-          i18n.translate(
-            "You didn't accept the picopeering agreement."
-          )
-        }
-      }
-    end
-    return val
-  end
 end
 
 function M.handle(data)
