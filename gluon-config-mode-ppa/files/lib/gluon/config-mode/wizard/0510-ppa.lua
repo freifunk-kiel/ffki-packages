@@ -12,7 +12,7 @@ function M.section(form)
   )
 
   local o = s:option(cbi.Flag, "_ppa", i18n.translate("I agree with the PPA"))
-  o.default = uci:get_first(gluon-node-info", "owner", "ppa", "")
+  o.default = uci:get_first("gluon-node-info", "owner", "ppa", "")
   o.rmempty = false
 
   o.validate = function(self, val)
