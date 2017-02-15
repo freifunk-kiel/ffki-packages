@@ -6,7 +6,7 @@ PKG_RELEASE:=$(GLUON_BRANCH)
 
 PKG_BUILD_DIR := $(BUILD_DIR)/$(PKG_NAME)
 
-include $(INCLUDE_DIR)/package.mk
+include $(GLUONDIR)/include/package.mk
 
 define Package/gluon-usb-media
   SECTION:=gluon

@@ -5,7 +5,7 @@ PKG_VERSION:=1
 
 PKG_BUILD_DIR := $(BUILD_DIR)/$(PKG_NAME)
 
-include $(INCLUDE_DIR)/package.mk
+include $(GLUONDIR)/include/package.mk
 
 PKG_CONFIG_DEPENDS += $(GLUON_I18N_CONFIG)
 
