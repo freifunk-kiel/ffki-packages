@@ -1,20 +1,20 @@
 local cbi = require "luci.cbi"
-local i18n = require "luci.i18n"
-local uci = luci.model.uci.cursor()
+local i18n = require "gluon.util"
+local uci = require("simple-uci").cursor()
 local site = require 'gluon.site_config'
 
 local M = {}
 
 function M.section(form)
-  local s = form:section(cbi.SimpleSection, nil, i18n.translate(
+  local s = form:section(cbi.SimpleSection, nil, translate(
       "Please agree with the <a href=\"http://www.picopeer.net/\" target=\"_blank\">"
       .. "Picopeering Agreement (PPA)</a> and be available."
     )
   )
 
-  local o = s:option(cbi.Flag, "_ppa", i18n.translate("I agree with the PPA"))
+  local o = s:option(Flag, "ppa", translate("I agree with the PPA"))
   o.default = uci:get_first("gluon-node-info", "owner", "ppa", "")
-  o.rmempty = false
+  o.optional = false
 end
 
 function M.handle(data)
