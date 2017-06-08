@@ -36,6 +36,15 @@ code in your `site.conf`:
 
 This package Replaces the standard gluon-package `gluon-config-mode-contact-info`
 
+### gluon-config-mode-ppa
+
+Adds a link to the Picopeering Agreement]() and a checkbox, that will be stored in
+
+    gluon-node-info.@owner[0].ppa='1'
+
+This is optional, so the config mode can still be saved if the checkbox is unchecked.
+
+
 ### gluon-config-mode-hostname-no-pretty
 
 Adds an extra condition, that the nodes hostname must be of the LUA type "hostname". 
