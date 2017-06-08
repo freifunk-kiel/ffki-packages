@@ -7,8 +7,7 @@ PKG_RELEASE:=1
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)
 PKG_BUILD_DEPENDS:=node/host
 
-include $(INCLUDE_DIR)/package.mk
-
+include $(TOPDIR)/../package/gluon.mk
 
 define Download/rjs
 	FILE:=r.js

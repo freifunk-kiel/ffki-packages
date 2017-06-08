@@ -2,11 +2,10 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=gluon-usb-media
 PKG_VERSION:=4
-PKG_RELEASE:=$(GLUON_BRANCH)
 
 PKG_BUILD_DIR := $(BUILD_DIR)/$(PKG_NAME)
 
-include $(INCLUDE_DIR)/package.mk
+include $(TOPDIR)/../package/gluon.mk
 
 define Package/gluon-usb-media
   SECTION:=gluon

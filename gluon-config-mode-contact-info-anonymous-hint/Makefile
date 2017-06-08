@@ -9,7 +9,6 @@ include $(TOPDIR)/../package/gluon.mk
 
 PKG_CONFIG_DEPENDS += $(GLUON_I18N_CONFIG)
 
-
 define Package/gluon-config-mode-contact-info-anonymous-hint
   SECTION:=gluon
   CATEGORY:=Gluon
