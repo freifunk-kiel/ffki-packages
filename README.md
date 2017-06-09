@@ -11,6 +11,8 @@ For example in case in your community you have to reset a lot of routers
 back to the stable branch due to a time, where some new not completely supported
 router models had to be installed with the experimental firmware.
 
+*TODO: untested, but it should be working on builds with LEDE*
+
 ### gluon-config-mode-contact-info-anonymous-hint
 This is a copy of the gluon standard package `gluon-config-mode-contact-info` 
 with an extra error message hint, that you can enter space if you want to run
@@ -20,21 +22,7 @@ You have to adapt these settings in your i18n files:
 
 This package Replaces the standard gluon-package `gluon-config-mode-contact-info`
 
-### gluon-config-mode-contact-obligatory
-
-_This is the old obsolete package for gluon < 2016.2 ! The option obligatory 
-was implemented in gluon differently in 2016.2. If you depend on the adapted 
-warning message use the package `gluon-config-mode-contact-info-anonymous-hint`_
-
-Set a custom string as owner contact that will be distributed in the mesh. 
-You can define that the owner contact field is obligatory with the following 
-code in your `site.conf`:
-
-    owner = {
-        obligatory = true
-    },
-
-This package Replaces the standard gluon-package `gluon-config-mode-contact-info`
+*TODO: not working on LEDE*
 
 ### gluon-config-mode-ppa
 
@@ -44,6 +32,7 @@ Adds a link to the Picopeering Agreement]() and a checkbox, that will be stored 
 
 This is optional, so the config mode can still be saved if the checkbox is unchecked.
 
+*tested and working on LEDE*
 
 ### gluon-config-mode-hostname-no-pretty
 
@@ -55,6 +44,7 @@ suggestion any more.
 
 This package replaces the standard gluon-package `gluon-config-mode-hostname`
 
+*TODO: not working on LEDE*
 
 ### gluon-config-mode-usb-media
 
@@ -68,17 +58,15 @@ On the SSH console you can enable usb-sharing with:
 If you don't want to share your device under the default URL, you can change this setting with:
 
     uci set gluon-usb-media.settings.path='secret-path'
-
+    
+*TODO: not working on LEDE*
+    
 ### gluon-usb-media
 
 Automatically mount your USB media in the configured web path
 in `gluon-config-mode-usb-media` if "Enable USB media" is set to true.
 
-### gluon-status-page-en
-
-An exact copy of `gluon-status-page` with just the german strings translated to english.
-
-This package replaces the standard gluon-package `gluon-status-page`
+*TODO: untested, but it should be working on builds with LEDE*
 
 # site-config
 
