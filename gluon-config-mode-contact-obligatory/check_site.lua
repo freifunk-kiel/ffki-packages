@@ -1,1 +1,0 @@
-need_boolean('owner.obligatory', false)
