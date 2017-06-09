@@ -2,7 +2,6 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=gluon-usb-media
 PKG_VERSION:=4
-PKG_RELEASE:=$(GLUON_BRANCH)
 
 PKG_BUILD_DIR := $(BUILD_DIR)/$(PKG_NAME)
 
