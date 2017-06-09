@@ -20,22 +20,6 @@ You have to adapt these settings in your i18n files:
 
 This package Replaces the standard gluon-package `gluon-config-mode-contact-info`
 
-### gluon-config-mode-contact-obligatory
-
-_This is the old obsolete package for gluon < 2016.2 ! The option obligatory 
-was implemented in gluon differently in 2016.2. If you depend on the adapted 
-warning message use the package `gluon-config-mode-contact-info-anonymous-hint`_
-
-Set a custom string as owner contact that will be distributed in the mesh. 
-You can define that the owner contact field is obligatory with the following 
-code in your `site.conf`:
-
-    owner = {
-        obligatory = true
-    },
-
-This package Replaces the standard gluon-package `gluon-config-mode-contact-info`
-
 ### gluon-config-mode-ppa
 
 Adds a link to the Picopeering Agreement]() and a checkbox, that will be stored in
