@@ -17,8 +17,8 @@ define Package/gluon-config-mode-usb-media
 endef
 
 define Package/gluon-config-mode-usb-media/description
-	Enable USB media automount in config mode and set the 
-	web path to access it via http://[IPv6]
+  Enable USB media automount in config mode and set the 
+  web path to access it via http://[IPv6]
 endef
 
 define Build/Prepare
