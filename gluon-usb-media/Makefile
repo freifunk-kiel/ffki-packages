@@ -15,10 +15,10 @@ define Package/gluon-usb-media
 endef
 
 define Package/gluon-usb-media/description
-	Automatically mount your USB media in the configured web path
-	in gluon-config-mode-usb-media if "Enable USB media" is set to true
-	The path is of the type "hostname", which is fitting perfect as a
-	string that includes only [a-zA-Z0-9_%-%.]
+  Automatically mount your USB media in the configured web path
+  in gluon-config-mode-usb-media if "Enable USB media" is set to true
+  The path is of the type "hostname", which is fitting perfect as a
+  string that includes only [a-zA-Z0-9_%-%.]
 endef
 
 define Build/Prepare

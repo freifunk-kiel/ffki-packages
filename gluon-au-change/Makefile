@@ -16,7 +16,7 @@ define Package/gluon-au-change
 endef
 
 define Package/gluon-au-change/description
-	changes autoupdater branch to stable
+  changes autoupdater branch to stable
 endef
 
 define Build/Prepare

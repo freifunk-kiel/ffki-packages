@@ -17,7 +17,7 @@ define Package/gluon-config-mode-ppa
 endef
 
 define Package/gluon-config-mode-ppa/description
-	Add a checkbox to accept the PPA
+  Add a checkbox to accept the PPA
 endef
 
 define Build/Prepare

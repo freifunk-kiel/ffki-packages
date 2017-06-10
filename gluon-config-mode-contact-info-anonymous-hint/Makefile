@@ -17,9 +17,9 @@ define Package/gluon-config-mode-contact-info-anonymous-hint
 endef
 
 define Package/gluon-config-mode-contact-info-anonymous-hint/description
-	Allows the user to provide contact information to be distributed in the mesh.
-	Can be made obligatory in site.conf. If made obligatory, it shows a hint, that
-	you can enter a space to run the node anonymously
+  Allows the user to provide contact information to be distributed in the mesh.
+  Can be made obligatory in site.conf. If made obligatory, it shows a hint, that
+  you can enter a space to run the node anonymously
 endef
 
 define Build/Prepare
