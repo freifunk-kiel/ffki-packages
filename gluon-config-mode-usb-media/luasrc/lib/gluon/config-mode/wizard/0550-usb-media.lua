@@ -1,14 +1,10 @@
-local cbi = require "luci.cbi"
-local i18n = require "gluon.util"
-local uci = require("simple-uci").cursor()
-
-local M = {}
-
-function M.section(form)
-	local s = form:section(cbi.SimpleSection, nil, translate(
-		'If you want to share your attached USB storage devices, '
-			.. 'here you can enable this and specify the visible path in '
-			.. 'the URL of your Node.'))
+return function(form, uci)
+	local s = form:section(Section, nil, translate(
+			'If you want to share your attached USB storage devices, ' ..
+			'here you can enable this and specify the visible path in ' ..
+			'the URL of your Node.'
+		)
+	)
 
 	local o
 
@@ -18,27 +14,30 @@ function M.section(form)
 
 	o = s:option(Value, "usbmediapath", translate("Path"))
 	o.default = uci:get("gluon-usb-media", "settings", "path")
-	o:depends("_usbmediasharing", "1")
+	o:depends("usbmediasharing", "1")
 	o.optional = false
-	o.datatype = "hostname"
+	-- without a minimal length, an empty string will be accepted even with "optional = false"
+	o.datatype = "minlength(1)"
 	o.description = translatef("e.g. %s", "media")
-
-end
-
-function M.handle(data)
-
-	uci:section('gluon-usb-media', 'gluon-usb-media', 'settings', {
-				share_device = data._usbmediasharing,
-			}
-		)
-	if data._usbmediasharing and data._usbmediapath ~= nil then
+	
+	function o:write(data)
 		uci:section('gluon-usb-media', 'gluon-usb-media', 'settings', {
-				path = data._usbmediapath,
-			}
-		)
+					share_device = data.usbmediasharing,
+				}
+			)
+		if data.usbmediasharing and data.usbmediapath ~= nil then
+			uci:section('gluon-usb-media', 'gluon-usb-media', 'settings', {
+					path = data.usbmediapath,
+				}
+			)
+		end
+		
+		if data then
+			uci:set('gluon-usb-media', 'gluon-usb-media', 'settings', data)
+		else
+			uci:delete('gluon-usb-media', 'gluon-usb-media', 'settings')
+		end
 	end
-	uci:save("gluon-usb-media")
-	uci:commit("gluon-usb-media")
-end
 
-return M
+	return {'gluon-usb-media'}
+end
