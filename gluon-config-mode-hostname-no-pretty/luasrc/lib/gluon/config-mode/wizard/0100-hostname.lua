@@ -4,7 +4,7 @@ return function(form, uci)
 	local s = form:section(Section)
 	local o = s:option(Value, "hostname", translate("Node name"))
 	o.default = pretty_hostname.get(uci)
-	o.datatype = "hostname"
+	o.datatype = "minlength(1)"
 
 	function o:write(data)
 		pretty_hostname.set(uci, data)
