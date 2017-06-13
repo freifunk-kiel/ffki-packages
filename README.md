@@ -36,15 +36,14 @@ This is optional, so the config mode can still be saved if the checkbox is unche
 
 ### gluon-config-mode-hostname-no-pretty
 
-Adds an extra condition, that the nodes hostname must be of the LUA type "hostname". 
-This will disallow some possibilities that would be allowed since 2016.2 by the new
-type `pretty_hostname`. The advantage is, that it allows you to set an invalid default
-hostname in your site.conf, so the user is not allowed to use the default hostname 
-suggestion any more.
+Adds an extra condition, that the nodes hostname must have a minlenth of 1.
+Without this package it would be allowed to leave the nodename field empty.
+It is planned in gluon, that the default nodename will not be allowed, so the 
+old behaviour of this package in 2016.2 will be back soon: https://github.com/freifunk-gluon/gluon/issues/1139
 
 This package replaces the standard gluon-package `gluon-config-mode-hostname`
 
-*TODO: not working on LEDE*
+*tested and working on LEDE*
 
 ### gluon-config-mode-usb-media
 
