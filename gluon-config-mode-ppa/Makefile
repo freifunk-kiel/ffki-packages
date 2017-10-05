@@ -9,14 +9,14 @@ include $(TOPDIR)/../package/gluon.mk
 
 PKG_CONFIG_DEPENDS += $(GLUON_I18N_CONFIG)
 
-define Package/gluon-config-mode-ppa
+define Package/$(PKG_NAME)
   SECTION:=gluon
   CATEGORY:=Gluon
   TITLE:=Add a checkbox to accept the PPA
   DEPENDS:=gluon-config-mode-core-virtual +gluon-node-info
 endef
 
-define Package/gluon-config-mode-ppa/description
+define Package/$(PKG_NAME)/description
   Add a checkbox to accept the PPA
 endef
 
@@ -28,12 +28,12 @@ define Build/Configure
 endef
 
 define Build/Compile
-	$(call GluonBuildI18N,gluon-config-mode-ppa,i18n)
+	$(call GluonBuildI18N,$(PKG_NAME),i18n)
 endef
 
-define Package/gluon-config-mode-ppa/install
+define Package/$(PKG_NAME)/install
 	$(CP) ./files/* $(1)/
-	$(call GluonInstallI18N,gluon-config-mode-ppa,$(1))
+	$(call GluonInstallI18N,$(PKG_NAME),$(1))
 endef
 
-$(eval $(call BuildPackage,gluon-config-mode-ppa))
+$(eval $(call BuildPackage,$(PKG_NAME)))

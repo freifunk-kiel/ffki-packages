@@ -9,14 +9,14 @@ include $(TOPDIR)/../package/gluon.mk
 
 PKG_CONFIG_DEPENDS += $(GLUON_I18N_CONFIG)
 
-define Package/gluon-config-mode-usb-media
+define Package/$(PKG_NAME)
   SECTION:=gluon
   CATEGORY:=Gluon
   TITLE:=Enable USB media and set web path for access
   DEPENDS:=+gluon-config-mode-core-virtual +gluon-usb-media
 endef
 
-define Package/gluon-config-mode-usb-media/description
+define Package/$(PKG_NAME)/description
   Enable USB media automount in config mode and set the 
   web path to access it via http://[IPv6]
 endef
@@ -29,14 +29,14 @@ define Build/Configure
 endef
 
 define Build/Compile
-	$(call GluonBuildI18N,gluon-config-mode-usb-media,i18n)
+	$(call GluonBuildI18N,$(PKG_NAME),i18n)
 	$(call GluonSrcDiet,./luasrc,$(PKG_BUILD_DIR)/luadest/)
 endef
 
-define Package/gluon-config-mode-usb-media/install
+define Package/$(PKG_NAME)/install
 	$(CP) ./files/* $(1)/
 	$(CP) $(PKG_BUILD_DIR)/luadest/* $(1)/
-	$(call GluonInstallI18N,gluon-config-mode-usb-media,$(1))
+	$(call GluonInstallI18N,$(PKG_NAME),$(1))
 endef
 
-$(eval $(call BuildPackage,gluon-config-mode-usb-media))
+$(eval $(call BuildPackage,$(PKG_NAME)))

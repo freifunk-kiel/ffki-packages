@@ -7,14 +7,14 @@ PKG_BUILD_DIR := $(BUILD_DIR)/$(PKG_NAME)
 
 include $(TOPDIR)/../package/gluon.mk
 
-define Package/gluon-usb-media
+define Package/$(PKG_NAME)
   SECTION:=gluon
   CATEGORY:=Gluon
   DEPENDS:=+gluon-core
   TITLE:=Automatically mount your USB media
 endef
 
-define Package/gluon-usb-media/description
+define Package/$(PKG_NAME)/description
   Automatically mount your USB media in the configured web path
   in gluon-config-mode-usb-media if "Enable USB media" is set to true
   The path is of the type "hostname", which is fitting perfect as a
@@ -28,8 +28,8 @@ endef
 define Build/Compile
 endef
 
-define Package/gluon-usb-media/install
+define Package/$(PKG_NAME)/install
 	$(CP) ./files/* $(1)/
 endef
 
-$(eval $(call BuildPackage,gluon-usb-media))
+$(eval $(call BuildPackage,$(PKG_NAME)))
