@@ -1,3 +1,0 @@
-config 'gluon-usb-media' 'settings'
-	option 'share_device' '0'
-	option 'path' 'media'
