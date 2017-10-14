@@ -14,7 +14,7 @@ return function(form, uci)
 
 	o = s:option(Value, "usbmediapath", translate("Path"))
 	o.default = uci:get("gluon-usb-media", "settings", "path")
-	o:depends("usbmediasharing", "1")
+	-- this throws an error: o:depends("usbmediasharing", "1")
 	o.optional = false
 	-- without a minimal length, an empty string will be accepted even with "optional = false"
 	o.datatype = "minlength(1)"
