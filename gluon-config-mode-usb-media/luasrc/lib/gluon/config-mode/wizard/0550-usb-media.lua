@@ -1,4 +1,6 @@
 return function(form, uci)
+	local settings = uci:get_first("gluon-usb-media", "settings")
+
 	local s = form:section(Section, nil, translate(
 			'If you want to share your attached USB storage devices, ' ..
 			'here you can enable this and specify the visible path in ' ..
@@ -6,37 +8,22 @@ return function(form, uci)
 		)
 	)
 
-	local o
+	local share_device = s:option(Flag, "settings", translate("Share your devices"))
+	share_device.default = uci:get_bool("gluon-usb-media", "settings", "share_device")
+	
+	function share_device:write(data)
+		uci:set("gluon-usb-media", "settings", "share_device", data)
+	end
 
-	o = s:option(Flag, "usbmediasharing", translate("Share your devices"))
-	o.default = uci:get("gluon-usb-media", "settings", "share_device", o.disabled)
-	o.optional = false
-
-	o = s:option(Value, "usbmediapath", translate("Path"))
+	local o = s:option(Value, "path", translate("Path"), translatef("e.g. %s", "media"))
 	o.default = uci:get("gluon-usb-media", "settings", "path")
-	-- this throws an error: o:depends("usbmediasharing", "1")
+	o:depends(share_device, true)
 	o.optional = false
 	-- without a minimal length, an empty string will be accepted even with "optional = false"
 	o.datatype = "minlength(1)"
-	o.description = translatef("e.g. %s", "media")
 	
 	function o:write(data)
-		uci:section('gluon-usb-media', 'gluon-usb-media', 'settings', {
-					share_device = data.usbmediasharing,
-				}
-			)
-		if data.usbmediasharing and data.usbmediapath ~= nil then
-			uci:section('gluon-usb-media', 'gluon-usb-media', 'settings', {
-					path = data.usbmediapath,
-				}
-			)
-		end
-		
-		if data then
-			uci:set('gluon-usb-media', 'gluon-usb-media', 'settings', data)
-		else
-			uci:delete('gluon-usb-media', 'gluon-usb-media', 'settings')
-		end
+		uci:set("gluon-usb-media", "settings", "path", data)
 	end
 
 	return {'gluon-usb-media'}

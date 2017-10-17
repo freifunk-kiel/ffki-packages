@@ -58,14 +58,14 @@ If you don't want to share your device under the default URL, you can change thi
 
     uci set gluon-usb-media.settings.path='secret-path'
     
-*TODO: not working on LEDE*
+*tested and working on LEDE*
     
 ### gluon-usb-media
 
 Automatically mount your USB media in the configured web path
 in `gluon-config-mode-usb-media` if "Enable USB media" is set to true.
 
-*TODO: untested, but it should be working on builds with LEDE*
+*tested and working on LEDE*
 
 # site-config
 
