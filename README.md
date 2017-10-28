@@ -5,7 +5,7 @@ Freifunk Kiel - gluon-packages
 
 This package changes the autoupdater branch to stable on each update.
 
-It should be used only for a short period of time. 
+It should be used only for a short period of time.
 
 For example in case in your community you have to reset a lot of routers
 back to the stable branch due to a time, where some new not completely supported
@@ -14,7 +14,7 @@ router models had to be installed with the experimental firmware.
 *TODO: untested, but it should be working on builds with LEDE*
 
 ### gluon-config-mode-contact-info-anonymous-hint
-This is a copy of the gluon standard package `gluon-config-mode-contact-info` 
+This is a copy of the gluon standard package `gluon-config-mode-contact-info`
 with an extra error message hint, that you can enter space if you want to run
 your node anonymously.
 
@@ -38,7 +38,7 @@ This is optional, so the config mode can still be saved if the checkbox is unche
 
 Adds an extra condition, that the nodes hostname must have a minlenth of 1.
 Without this package it would be allowed to leave the nodename field empty.
-It is planned in gluon, that the default nodename will not be allowed, so the 
+It is planned in gluon, that the default nodename will not be allowed, so the
 old behaviour of this package in 2016.2 will be back soon: https://github.com/freifunk-gluon/gluon/issues/1139
 
 This package replaces the standard gluon-package `gluon-config-mode-hostname`
@@ -47,7 +47,7 @@ This package replaces the standard gluon-package `gluon-config-mode-hostname`
 
 ### gluon-config-mode-usb-media
 
-Enable USB media automount in config mode and set the web path to access it 
+Enable USB media automount in config mode and set the web path to access it
 (default `/media/`) so the USB storage will be accessible for example via _http://\[1B46:0f:40CB::00de]/media/_
 
 On the SSH console you can enable usb-sharing with:
@@ -57,13 +57,16 @@ On the SSH console you can enable usb-sharing with:
 If you don't want to share your device under the default URL, you can change this setting with:
 
     uci set gluon-usb-media.settings.path='secret-path'
-    
+
 *tested and working on LEDE*
-    
+
 ### gluon-usb-media
 
 Automatically mount your USB media in the configured web path
 in `gluon-config-mode-usb-media` if "Enable USB media" is set to true.
+
+This site explains how to add the USB-support modules to your site.conf:
+https://github.com/freifunk-gluon/gluon/wiki/USB-Support
 
 *tested and working on LEDE*
 
