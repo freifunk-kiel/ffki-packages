@@ -13,7 +13,7 @@ define Package/$(PKG_NAME)
   SECTION:=gluon
   CATEGORY:=Gluon
   TITLE:=Set the hostname but allows no special characters
-  DEPENDS:=gluon-config-mode-core-virtual
+  DEPENDS:=+gluon-config-mode-core
 endef
 
 define Build/Prepare

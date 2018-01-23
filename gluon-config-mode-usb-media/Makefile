@@ -13,7 +13,7 @@ define Package/$(PKG_NAME)
   SECTION:=gluon
   CATEGORY:=Gluon
   TITLE:=Enable USB media and set web path for access
-  DEPENDS:=+gluon-config-mode-core-virtual +gluon-usb-media
+  DEPENDS:=+gluon-config-mode-core +gluon-usb-media
 endef
 
 define Package/$(PKG_NAME)/description

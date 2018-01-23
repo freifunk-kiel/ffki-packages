@@ -13,7 +13,7 @@ define Package/$(PKG_NAME)
   SECTION:=gluon
   CATEGORY:=Gluon
   TITLE:=Add a checkbox to accept the PPA
-  DEPENDS:=gluon-config-mode-core-virtual +gluon-node-info
+  DEPENDS:=+gluon-config-mode-core +gluon-node-info
 endef
 
 define Package/$(PKG_NAME)/description
