@@ -11,7 +11,7 @@ For example in case in your community you have to reset a lot of routers
 back to the stable branch due to a time, where some new not completely supported
 router models had to be installed with the experimental firmware.
 
-*TODO: untested, but it should be working on builds with LEDE*
+*TODO: untested, but it should be working on builds with 2018.1.x*
 
 ### gluon-config-mode-contact-info-anonymous-hint
 This is a copy of the gluon standard package `gluon-config-mode-contact-info`
@@ -22,7 +22,7 @@ You have to adapt these settings in your i18n files:
 
 This package Replaces the standard gluon-package `gluon-config-mode-contact-info`
 
-*TODO: not working on LEDE*
+*TODO: untested, but probably still not working on 2018.1.x*
 
 ### gluon-config-mode-ppa
 
@@ -32,7 +32,7 @@ Adds a link to the Picopeering Agreement]() and a checkbox, that will be stored 
 
 This is optional, so the config mode can still be saved if the checkbox is unchecked.
 
-*tested and working on LEDE*
+*TODO: untested, but it should be working on 2018.1.x*
 
 ### gluon-config-mode-hostname-no-pretty
 
@@ -43,7 +43,7 @@ old behaviour of this package in 2016.2 will be back soon: https://github.com/fr
 
 This package replaces the standard gluon-package `gluon-config-mode-hostname`
 
-*tested and working on LEDE*
+*TODO: untested, but it should be working on 2018.1.x*
 
 ### gluon-config-mode-usb-media
 
@@ -58,7 +58,7 @@ If you don't want to share your device under the default URL, you can change thi
 
     uci set gluon-usb-media.settings.path='secret-path'
 
-*tested and working on LEDE*
+*TODO: untested, but it should be working on 2018.1.x*
 
 ### gluon-usb-media
 
@@ -68,7 +68,7 @@ in `gluon-config-mode-usb-media` if "Enable USB media" is set to true.
 This site explains how to add the USB-support modules to your site.conf:
 https://github.com/freifunk-gluon/gluon/wiki/USB-Support
 
-*tested and working on LEDE*
+*TODO: untested, but it should be working on 2018.1.x*
 
 # site-config
 
