@@ -1,12 +1,12 @@
 return function(form, uci)
 	local s = form:section(
-		Section, nil, translate(
+		Section, nil, pkg_i18n.translate(
 			'Please agree with the <a href="http://www.picopeer.net/" target="_blank">'
 				.. 'Picopeering Agreement (PPA)</a> and be available.'
 			)
 	)	 
 
-	local o = s:option(Flag, "ppa", translate("I agree with the PPA"))
+	local o = s:option(Flag, "ppa", pkg_i18n.translate("I agree with the PPA"))
 	o.default = uci:get_first("gluon-node-info", "owner", "ppa", "")
 	if o.default ~= nil then
 			o.default = false

@@ -2,7 +2,7 @@ return function(form, uci)
 	local pretty_hostname = require "pretty_hostname"
 
 	local s = form:section(Section)
-	local o = s:option(Value, "hostname", translate("Node name"))
+	local o = s:option(Value, "hostname", pkg_i18n.translate("Node name"))
 	o.default = pretty_hostname.get(uci)
 	o.datatype = "minlength(1)"
 
