@@ -1,4 +1,6 @@
 return function(form, uci)
+	local pkg_i18n = i18n 'gluon-config-mode-contact-info-anonymous-hint'
+	
 	local site = require 'gluon.site'
 
 	local owner = uci:get_first("gluon-node-info", "owner")

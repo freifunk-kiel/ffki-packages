@@ -1,4 +1,6 @@
 return function(form, uci)
+	local pkg_i18n = i18n 'gluon-config-mode-usb-media'
+
 	local settings = uci:get_first("gluon-usb-media", "settings")
 
 	local s = form:section(Section, nil, pkg_i18n.translate(

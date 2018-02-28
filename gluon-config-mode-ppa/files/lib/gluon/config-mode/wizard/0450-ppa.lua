@@ -1,4 +1,6 @@
 return function(form, uci)
+	local pkg_i18n = i18n 'gluon-config-mode-ppa'
+
 	local s = form:section(
 		Section, nil, pkg_i18n.translate(
 			'Please agree with the <a href="http://www.picopeer.net/" target="_blank">'
