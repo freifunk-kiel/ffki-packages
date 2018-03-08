@@ -1,5 +1,7 @@
 Freifunk Kiel - gluon-packages
-============================
+==============================
+
+This branch contains packages for the coming gluon release 2018.1.
 
 ### gluon-au-change
 
@@ -48,7 +50,8 @@ This package replaces the standard gluon-package `gluon-config-mode-hostname`
 ### gluon-config-mode-usb-media
 
 Enable USB media automount in config mode and set the web path to access it
-(default `/media/`) so the USB storage will be accessible for example via _http://\[1B46:0f:40CB::00de]/media/_
+(default `/media/`) so all partitions on the USB storage will be accessible for
+example via _http://\[1B46:0f:40CB::00de]/media/_
 
 On the SSH console you can enable usb-sharing with:
 

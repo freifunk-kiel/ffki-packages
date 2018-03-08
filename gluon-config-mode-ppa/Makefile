@@ -3,8 +3,6 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=gluon-config-mode-ppa
 PKG_VERSION:=1
 
-PKG_BUILD_DIR := $(BUILD_DIR)/$(PKG_NAME)
-
 include $(TOPDIR)/../package/gluon.mk
 
 PKG_CONFIG_DEPENDS += $(GLUON_I18N_CONFIG)
@@ -18,13 +16,6 @@ endef
 
 define Package/$(PKG_NAME)/description
   Add a checkbox to accept the PPA
-endef
-
-define Build/Prepare
-	mkdir -p $(PKG_BUILD_DIR)
-endef
-
-define Build/Configure
 endef
 
 define Build/Compile
