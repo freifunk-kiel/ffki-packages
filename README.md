@@ -40,12 +40,11 @@ This is optional, so the config mode can still be saved if the checkbox is unche
 
 Adds an extra condition, that the nodes hostname must have a minlenth of 1.
 Without this package it would be allowed to leave the nodename field empty.
-It is planned in gluon, that the default nodename will not be allowed, so the
-old behaviour of this package in 2016.2 will be back soon: https://github.com/freifunk-gluon/gluon/issues/1139
+This is solved upstream in gluon: https://github.com/freifunk-gluon/gluon/commit/7827f8960fba5a8eff81bb500d18a5fa3c505ebd
 
 This package replaces the standard gluon-package `gluon-config-mode-hostname`
 
-*TODO: untested, but it should be working on 2018.1.x*
+*obsolete in 2018.1.x*
 
 ### gluon-config-mode-usb-media
 
