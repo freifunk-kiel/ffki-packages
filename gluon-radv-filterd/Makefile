@@ -20,6 +20,7 @@ MAKE_VARS += \
 define Package/gluon-radv-filterd/install
 	$(Gluon/Build/Install)
 
+	$(CP) ./files/* $(1)/
 	$(INSTALL_DIR) $(1)/usr/sbin/
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/gluon-radv-filterd $(1)/usr/sbin/
 endef
