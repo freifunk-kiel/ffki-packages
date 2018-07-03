@@ -1,10 +1,10 @@
 msgid ""
 msgstr "Content-Type: text/plain; charset=UTF-8"
 
-msgid "I agree with the PPA"
+msgid "I understand the PPA"
 msgstr ""
 
 msgid ""
-"Please agree with the <a href=\"http://www.picopeer.net/\" target=\"_blank\">"
-"Picopeering Agreement (PPA)</a> and be available."
+"I understand the <a href=\"http://www.picopeer.net/\" target=\"_blank\">"
+"Picopeering Agreement (PPA)</a> and will be contactable."
 msgstr ""
