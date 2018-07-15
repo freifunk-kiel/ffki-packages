@@ -4,7 +4,8 @@ return function(form, uci)
 	local s = form:section(
 		Section, nil, pkg_i18n.translate(
 			'I understand the <a href="http://www.picopeer.net/" target="_blank">'
-				.. 'Picopeering Agreement (PPA)</a> and will be contactable.'
+				.. 'Picopeering Agreement (PPA)</a> and I will make sure that I will '
+				.. 'be reachable via the entered contact.'
 			)
 	)	 
 
