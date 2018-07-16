@@ -11,7 +11,8 @@ case "${ACTION}" in
                         logger "/mnt/${DEVICENAME} mounted and linked to ${WEBPATH}/${USBMEDIAPATH}"
                         mount -o ro "/dev/${DEVICENAME}" "/mnt/${DEVICENAME}" || rmdir "/mnt/${DEVICENAME}"
                         [ -d "${WEBPATH}/${USBMEDIAPATH}" ] || mv "${WEBPATH}/${DEF_USB}" "${WEBPATH}/${USBMEDIAPATH}"
-                        ln -fs "/mnt/${DEVICENAME}" "${WEBPATH}/${USBMEDIAPATH}"
+                        mkdir -p "${WEBPATH}/${USBMEDIAPATH}"
+                        ln -fs "/mnt/${DEVICENAME}" "${WEBPATH}/${USBMEDIAPATH}/${DEVICENAME}"
                     fi
                 ;;
           esac
@@ -21,6 +22,7 @@ case "${ACTION}" in
         case "${DEVICENAME}" in
             s*[0-9])
                 logger "Remove ${DEVICENAME}"
+                rm "${WEBPATH}/${USBMEDIAPATH}/${DEVICENAME}"
                 [ -d "/mnt/${DEVICENAME}" ] && rmdir "/mnt/${DEVICENAME}"
                 [ -L "${WEBPATH}/${DEF_USB}" ] || mv "${WEBPATH}/${USBMEDIAPATH}" "${WEBPATH}/${DEF_USB}"
             ;;
