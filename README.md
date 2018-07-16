@@ -1,7 +1,7 @@
 Freifunk Kiel - gluon-packages
 ==============================
 
-This branch contains packages for the coming gluon release 2018.1.
+This branch contains packages for the gluon release 2018.1.x
 
 ### gluon-au-change
 
