@@ -1,6 +1,8 @@
 Freifunk Kiel - gluon-packages
 ============================
 
+This branch is only for gluon 2016.2.x Use the other branches for newer gluon versions.
+
 ### gluon-au-change
 
 This package changes the autoupdater branch to stable on each update.
