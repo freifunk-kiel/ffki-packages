@@ -1,7 +1,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=gluon-usb-media
-PKG_VERSION:=4
+PKG_VERSION:=5
 
 include $(TOPDIR)/../package/gluon.mk
 
@@ -19,15 +19,4 @@ define Package/$(PKG_NAME)/description
   characters [a-zA-Z0-9_%-%.]
 endef
 
-define Build/Prepare
-	mkdir -p $(PKG_BUILD_DIR)
-endef
-
-define Build/Compile
-endef
-
-define Package/$(PKG_NAME)/install
-	$(CP) ./files/* $(1)/
-endef
-
-$(eval $(call BuildPackage,$(PKG_NAME)))
+$(eval $(call BuildPackageGluon,$(PKG_NAME)))

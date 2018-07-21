@@ -24,7 +24,7 @@ You have to adapt these settings in your i18n files:
 
 This package Replaces the standard gluon-package `gluon-config-mode-contact-info`
 
-*TODO: untested, but probably still not working on 2018.1.x*
+*TODO: probably not working on 2018.1.x*
 
 ### gluon-config-mode-ppa
 
@@ -35,16 +35,6 @@ Adds a link to the Picopeering Agreement]() and a checkbox, that will be stored 
 This is optional, so the config mode can still be saved if the checkbox is unchecked.
 
 *TODO: untested, but it should be working on 2018.1.x*
-
-### gluon-config-mode-hostname-no-pretty
-
-Adds an extra condition, that the nodes hostname must have a minlenth of 1.
-Without this package it would be allowed to leave the nodename field empty.
-This is solved upstream in gluon: https://github.com/freifunk-gluon/gluon/commit/7827f8960fba5a8eff81bb500d18a5fa3c505ebd
-
-This package replaces the standard gluon-package `gluon-config-mode-hostname`
-
-*obsolete in 2018.1.x*
 
 ### gluon-config-mode-usb-media
 
