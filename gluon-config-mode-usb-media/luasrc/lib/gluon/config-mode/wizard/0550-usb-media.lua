@@ -1,8 +1,6 @@
 return function(form, uci)
 	local pkg_i18n = i18n 'gluon-config-mode-usb-media'
 
-	local settings = uci:get_first("gluon-usb-media", "settings")
-
 	local s = form:section(Section, nil, pkg_i18n.translate(
 			'If you want to share your attached USB storage devices, ' ..
 			'here you can enable this and specify the visible path in ' ..
@@ -12,7 +10,7 @@ return function(form, uci)
 
 	local share_device = s:option(Flag, "settings", pkg_i18n.translate("Share your devices"))
 	share_device.default = uci:get_bool("gluon-usb-media", "settings", "share_device")
-	
+
 	function share_device:write(data)
 		uci:set("gluon-usb-media", "settings", "share_device", data)
 	end
@@ -23,7 +21,7 @@ return function(form, uci)
 	o.optional = false
 	-- without a minimal length, an empty string will be accepted even with "optional = false"
 	o.datatype = "minlength(1)"
-	
+
 	function o:write(data)
 		uci:set("gluon-usb-media", "settings", "path", data)
 	end

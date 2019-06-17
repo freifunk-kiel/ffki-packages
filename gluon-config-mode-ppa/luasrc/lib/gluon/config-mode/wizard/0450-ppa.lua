@@ -7,7 +7,7 @@ return function(form, uci)
 				.. 'Picopeering Agreement (PPA)</a> and I will make sure that I will '
 				.. 'be reachable via the entered contact.'
 			)
-	)	 
+	)
 
 	local o = s:option(Flag, "ppa", pkg_i18n.translate("I understand the PPA"))
 	o.default = uci:get_first("gluon-node-info", "owner", "ppa", "")
