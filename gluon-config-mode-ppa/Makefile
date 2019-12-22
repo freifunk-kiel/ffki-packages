@@ -9,7 +9,7 @@ define Package/$(PKG_NAME)
   SECTION:=gluon
   CATEGORY:=Gluon
   TITLE:=Add a checkbox to accept the PPA
-  DEPENDS:=+gluon-config-mode-core +gluon-node-info
+  DEPENDS:=+gluon-web-admin +gluon-node-info
 endef
 
 $(eval $(call BuildPackageGluon,$(PKG_NAME)))

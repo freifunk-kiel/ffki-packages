@@ -9,7 +9,7 @@ define Package/$(PKG_NAME)
   SECTION:=gluon
   CATEGORY:=Gluon
   TITLE:=Allows the user to provide contact information to be distributed in the mesh
-  DEPENDS:=+gluon-config-mode-core +gluon-node-info
+  DEPENDS:=+gluon-web-admin +gluon-node-info
 endef
 
 define Package/$(PKG_NAME)/description
