@@ -1,0 +1,19 @@
+language: bash
+
+addons:
+  apt:
+    packages:
+    - lua5.1
+    - luarocks
+  
+install:
+  - eval $(luarocks path --bin)
+  - luarocks install --local lua-cjson
+  - luarocks install --local luacheck
+
+script:
+  - bash .validate.sh
+
+# codecov token: 73803d04-5776-4e9d-9a91-fd2b2435d8a7
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -t 73803d04-5776-4e9d-9a91-fd2b2435d8a7

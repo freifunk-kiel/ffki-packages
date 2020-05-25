@@ -1,6 +1,8 @@
 Freifunk Kiel - gluon-packages
 ==============================
 
+[![Build Status](https://travis-ci.org/freifunk-kiel/ffki-packages.svg?branch=2018.1.x)](https://travis-ci.org/freifunk-kiel/ffki-packages)
+
 This branch contains packages for the gluon release 2018.1.x
 
 ### gluon-au-change
