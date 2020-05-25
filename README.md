@@ -11,8 +11,9 @@ This package changes the autoupdater branch to stable on each update.
 
 It should be used only for a short period of time.
 
-For example in case in your community you have to reset a lot of routers
-back to the stable branch due to a time, where some new not completely supported
+For example if in your community you have to reset a lot of routers
+back to the stable branch due to a time, where a lot of nodes were installed with 
+an experimental branch, because some new, not completely supported
 router models had to be installed with the experimental firmware.
 
 *TODO: untested, but it should be working on builds with 2018.1.x*
@@ -26,7 +27,7 @@ You have to adapt these settings in your i18n files:
 
 This package Replaces the standard gluon-package `gluon-config-mode-contact-info`
 
-*TODO: probably not working on 2018.1.x*
+*TODO: probably not working from 2018.1.x on*
 
 ### gluon-config-mode-ppa
 
